@@ -1,4 +1,35 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
+  "__elements": {},
+  "__requires": [
+    {
+      "type": "grafana",
+      "id": "grafana",
+      "name": "Grafana",
+      "version": "10.2.0"
+    },
+    {
+      "type": "datasource",
+      "id": "prometheus",
+      "name": "Prometheus",
+      "version": "1.0.0"
+    },
+    {
+      "type": "panel",
+      "id": "timeseries",
+      "name": "Time series",
+      "version": ""
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -18,14 +49,14 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 1,
+  "id": null,
   "links": [],
   "liveNow": false,
   "panels": [
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -104,7 +135,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -120,7 +151,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "rate(snmp_ifOutOctets_17[5m]) / 1024^2",
@@ -137,7 +168,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -216,7 +247,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "probe_dns_lookup_time_seconds{}",
@@ -232,7 +263,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -311,7 +342,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -327,7 +358,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "disableTextWrap": false,
           "editorMode": "builder",
@@ -348,7 +379,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -427,7 +458,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
           "expr": "probe_http_status_code",
@@ -443,7 +474,7 @@
     {
       "datasource": {
         "type": "prometheus",
-        "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+        "uid": "${DS_PROMETHEUS}"
       },
       "fieldConfig": {
         "defaults": {
@@ -523,7 +554,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e5a65e2a-52d3-43bb-810c-a01340e46a23"
+            "uid": "${DS_PROMETHEUS}"
           },
           "disableTextWrap": false,
           "editorMode": "code",
@@ -568,6 +599,6 @@
   "timezone": "",
   "title": "Internet Monitoring",
   "uid": "f15e6fa0-4b88-4d4f-9cd3-ce858adb66d8",
-  "version": 8,
+  "version": 9,
   "weekStart": ""
 }
